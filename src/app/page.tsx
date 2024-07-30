@@ -195,8 +195,9 @@ function MintArea() {
           </div>
           {display && (
             <div className="max-h-7">
-              {owned.map((item:any) => (
+              {owned.map((item:any,index:any) => (
                 <MediaRenderer
+                  key={index}
                   client={client}
                   src={item.metadata.image}
                   style={{ maxHeight: "250px" }}
